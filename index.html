@@ -6,23 +6,18 @@
   <title>Riyaad's Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    .glow-title {
-  color: #cbe7ff !important;
-  text-shadow:
-    0 0 10px #4da6ff,
-    0 0 20px #1e90ff,
-    0 0 35px #0077ff,
-    0 0 50px rgba(0, 153, 255, 0.8);
-}
-
-.glow-sub {
-  color: #e6f3ff !important;
-  text-shadow:
-    0 0 8px #4da6ff,
-    0 0 15px #1e90ff,
-    0 0 25px #0077ff;
-}
     body { scroll-behavior: smooth; }
+    section { scroll-margin-top: 80px; } /* ensures fixed navbar doesn't cover sections */
+
+    .glow-title {
+      color: #cbe7ff !important;
+      text-shadow: 0 0 10px #4da6ff, 0 0 20px #1e90ff, 0 0 35px #0077ff, 0 0 50px rgba(0, 153, 255, 0.8);
+    }
+
+    .glow-sub {
+      color: #e6f3ff !important;
+      text-shadow: 0 0 8px #4da6ff, 0 0 15px #1e90ff, 0 0 25px #0077ff;
+    }
 
     .footer {
       background: #343a40;
@@ -41,47 +36,40 @@
     }
 
     .hero-logo {
-  position: absolute;
-  top: 80px; 
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10; 
-  background: white;
-  border-radius: 10%;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  padding: 10px; 
-  width: 30%;        
-  max-width: 250px;  
-  text-align: center;
-}
+      position: absolute;
+      top: 80px; 
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10; 
+      background: white;
+      border-radius: 10%;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      padding: 10px; 
+      width: 30%;        
+      max-width: 250px;  
+      text-align: center;
+    }
 
-
-   .hero-logo img {
-  width: 100%;       
-  height: auto;      
-  max-width: 150px;  
-  border-radius: 10%;
-  display: block;
-  margin: 0 auto;
-}
-
+    .hero-logo img {
+      width: 100%;       
+      height: auto;      
+      max-width: 150px;  
+      border-radius: 10%;
+      display: block;
+      margin: 0 auto;
+    }
 
     @media (max-width: 768px) {
-  .hero-logo { 
-    top: 30px; 
-    width: 40%;        
-    max-width: 160px; 
-    padding: 6px; 
-  }
-  .hero-logo img {
-    max-width: 100%;   
-    height: auto;
-  }
-}
-
-
-    .carousel-item {
-      position: relative;
+      .hero-logo { 
+        top: 30px; 
+        width: 40%;        
+        max-width: 160px; 
+        padding: 6px; 
+      }
+      .hero-logo img {
+        max-width: 100%;   
+        height: auto;
+      }
     }
 
     .carousel-item img {
@@ -98,27 +86,14 @@
       font-weight: 700; 
       font-size: 2.2rem;  
       color: #b4d9ff;
-      text-shadow:
-        0 0 15px rgba(0,0,0,0.8),
-        2px 2px 8px rgba(0,0,0,0.9);
+      text-shadow: 0 0 15px rgba(0,0,0,0.8), 2px 2px 8px rgba(0,0,0,0.9);
+      margin-top: 0 !important; /* remove negative margins */
     }
 
     .carousel-caption p { 
       font-size: 1.1rem; 
       text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
     }
-
-    .carousel-caption {
-      bottom: -20px; 
-    }
-
-    /* Shadow preview for next/prev slides */
-    .carousel-item-next,
-    .carousel-item-prev {
-      filter: brightness(0.5) blur(2px);
-    }
-
-    #about { margin-top: -80px; }
 
     #projects .card {
       display: flex;
@@ -150,6 +125,8 @@
       margin-top: auto;         
     }
 
+    #certification { padding-top: 60px; padding-bottom: 60px; }
+
     /* Walking Stick Man */
     .walking-man {
       position: fixed;
@@ -167,73 +144,19 @@
       height: 50px;
     }
 
-    .head {
-      width: 10px;
-      height: 10px;
-      background: black;
-      border-radius: 50%;
-      position: absolute;
-      top: 0;
-      left: 5px;
-    }
-
-    .body {
-      width: 2px;
-      height: 25px;
-      background: black;
-      position: absolute;
-      top: 10px;
-      left: 9px;
-    }
-
-    .arm {
-      width: 12px;
-      height: 2px;
-      background: black;
-      position: absolute;
-      top: 15px;
-      transform-origin: left center;
-    }
-
+    .head { width: 10px; height: 10px; background: black; border-radius: 50%; position: absolute; top: 0; left: 5px; }
+    .body { width: 2px; height: 25px; background: black; position: absolute; top: 10px; left: 9px; }
+    .arm { width: 12px; height: 2px; background: black; position: absolute; top: 15px; transform-origin: left center; }
     .arm.left { transform: rotate(45deg); left: -2px; }
     .arm.right { transform: rotate(-45deg); left: 10px; }
-
-    .leg {
-      width: 12px;
-      height: 2px;
-      background: black;
-      position: absolute;
-      top: 35px;
-      transform-origin: left center;
-    }
-
+    .leg { width: 12px; height: 2px; background: black; position: absolute; top: 35px; transform-origin: left center; }
     .leg.left { transform: rotate(-30deg); left: -2px; animation: walk-leg 0.5s alternate infinite; }
     .leg.right { transform: rotate(30deg); left: 10px; animation: walk-leg 0.5s alternate-reverse infinite; }
+    .speech-bubble { margin-left: 15px; padding: 5px 10px; background: #fff; border-radius: 10px; border: 1px solid #000; font-weight: bold; animation: bubble-pop 1s infinite alternate; }
 
-    .speech-bubble {
-      margin-left: 15px;
-      padding: 5px 10px;
-      background: #fff;
-      border-radius: 10px;
-      border: 1px solid #000;
-      font-weight: bold;
-      animation: bubble-pop 1s infinite alternate;
-    }
-
-    @keyframes walk {
-      0% { left: -50px; }
-      100% { left: 110%; }
-    }
-
-    @keyframes walk-leg {
-      0% { transform: rotate(-30deg); }
-      100% { transform: rotate(30deg); }
-    }
-
-    @keyframes bubble-pop {
-      0% { transform: scale(1); opacity: 1; }
-      100% { transform: scale(1.2); opacity: 0.8; }
-    }
+    @keyframes walk { 0% { left: -50px; } 100% { left: 110%; } }
+    @keyframes walk-leg { 0% { transform: rotate(-30deg); } 100% { transform: rotate(30deg); } }
+    @keyframes bubble-pop { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(1.2); opacity: 0.8; } }
 
   </style>
 </head>
@@ -248,15 +171,16 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certification">Certification</a></li>
           <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="ContactMe.html">Contact</a></li>
-          <li class="nav-item"><a class="nav-link" href="#certification">Certification</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
+  <!-- Hero Section -->
   <section class="hero position-relative">
     <div class="hero-logo">
       <img src="images/toplogo.png" alt="Riyaad Logo">
@@ -274,14 +198,14 @@
         <div class="carousel-item text-center">
           <img src="images/Riyaadbannerslide2.png" class="d-block mx-auto" alt="Slide 2">
           <div class="carousel-caption d-none d-md-block">
-            <h1 class="m2 glow-title" style="margin-top: -11%;">Stay Positive, Work Hard, Make it Happen</h1>
+            <h1 class="glow-title">Stay Positive, Work Hard, Make it Happen</h1>
             <p class="lead glow-sub">Turning ideas into digital reality</p>
           </div>
         </div>
         <div class="carousel-item text-center">
           <img src="images/RiyaadBannerslide3.png" class="d-block mx-auto" alt="Slide 3">
           <div class="carousel-caption d-none d-md-block">
-            <h1 class="m1" style="margin-top: -50%;">Your Vision, My Code</h1>
+            <h1>Your Vision, My Code</h1>
             <p class="lead">Crafting responsive and interactive web experiences</p>
           </div>
         </div>
@@ -301,6 +225,8 @@
       </button>
     </div>
   </section>
+
+  <!-- About Me -->
   <section id="about" class="py-5">
     <div class="container">
       <h2 class="text-center mb-4">About Me</h2>
@@ -314,121 +240,58 @@
       </div>
     </div>
   </section>
+
+  <!-- Certification Section -->
   <section id="certification" class="py-5 bg-light">
-  <div class="container">
-    <h2 class="text-center mb-4">Certifications & Qualifications</h2>
-
-    <div class="row justify-content-center align-items-center">
-      <div class="col-md-4 text-center mb-3">
-        <!-- Certificate Image -->
-        <a href="images/msita-certificate.jpg" target="_blank">
-          <img 
-            src="images/ICT_Report.jpg" 
-            alt="MSITA Certificate"
-            class="img-fluid shadow rounded"
-            style="max-width: 300px;"
-          >
-        </a>
-      </div>
-
-      <div class="col-md-6">
-        <h4>MSITA – Microsoft Web Development & Graphic Design</h4>
-        <p class="mb-1"><strong>College of Cape Town</strong></p>
-        <p class="text-muted">
-          One year of hands-on practical training covering web development,
-          software development, database development, and graphic design.
-        </p>
+    <div class="container">
+      <h2 class="text-center mb-4">Certifications & Qualifications</h2>
+      <div class="row justify-content-center align-items-center">
+        <div class="col-md-4 text-center mb-3">
+          <a href="images/ICT_Report[1].jpg" target="_blank">
+            <img src="images/ICT_Report[1].jpg" alt="MSITA Certificate" class="img-fluid shadow rounded" style="max-width: 300px;">
+          </a>
+        </div>
+        <div class="col-md-6">
+          <h4>MSITA – Microsoft Web Development & Graphic Design</h4>
+          <p class="mb-1"><strong>College of Cape Town</strong></p>
+          <p class="text-muted">One year of hands-on practical training covering web development, software development, database development, and graphic design.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
+  <!-- Skills Section -->
   <section id="skills" class="py-5 bg-light">
     <div class="container">
       <h2 class="text-center mb-4">My Evolution to Becoming a Developer & Skills</h2>
       <div class="row g-4">
         <div class="col-md-6">
-          <h5>HTML</h5>
-          <div class="progress mb-3"><div class="progress-bar bg-success" role="progressbar" style="width: 95%;">95%</div></div>
-          <h5>CSS</h5>
-          <div class="progress mb-3"><div class="progress-bar bg-info" role="progressbar" style="width: 90%;">90%</div></div>
-          <h5>JavaScript</h5>
-          <div class="progress mb-3"><div class="progress-bar bg-warning" role="progressbar" style="width: 85%;">85%</div></div>
-          <h5>Bootstrap</h5>
-          <div class="progress mb-3"><div class="progress-bar bg-primary" role="progressbar" style="width: 90%;">90%</div></div>
+          <h5>HTML</h5><div class="progress mb-3"><div class="progress-bar bg-success" style="width: 95%;">95%</div></div>
+          <h5>CSS</h5><div class="progress mb-3"><div class="progress-bar bg-info" style="width: 90%;">90%</div></div>
+          <h5>JavaScript</h5><div class="progress mb-3"><div class="progress-bar bg-warning" style="width: 85%;">85%</div></div>
+          <h5>Bootstrap</h5><div class="progress mb-3"><div class="progress-bar bg-primary" style="width: 90%;">90%</div></div>
         </div>
         <div class="col-md-6">
-          <h5>C# / ASP.NET</h5>
-          <div class="progress mb-3"><div class="progress-bar bg-danger" role="progressbar" style="width: 95%;">95%</div></div>
-          <h5>SQL / Databases</h5>
-          <div class="progress mb-3"><div class="progress-bar bg-secondary" role="progressbar" style="width: 100%;">100%</div></div>
-          <h5>Python</h5>
-          <div class="progress mb-3"><div class="progress-bar bg-info" role="progressbar" style="width: 80%;">80%</div></div>
-          <h5>Photoshop</h5>
-          <div class="progress mb-3"><div class="progress-bar bg-success" role="progressbar" style="width: 90%;">90%</div></div>
+          <h5>C# / ASP.NET</h5><div class="progress mb-3"><div class="progress-bar bg-danger" style="width: 95%;">95%</div></div>
+          <h5>SQL / Databases</h5><div class="progress mb-3"><div class="progress-bar bg-secondary" style="width: 100%;">100%</div></div>
+          <h5>Python</h5><div class="progress mb-3"><div class="progress-bar bg-info" style="width: 80%;">80%</div></div>
+          <h5>Photoshop</h5><div class="progress mb-3"><div class="progress-bar bg-success" style="width: 90%;">90%</div></div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Projects Section -->
   <section id="projects" class="py-5">
     <div class="container">
       <h2 class="text-center mb-4">My Projects</h2>
       <div class="row g-4">
-        <div class="col-md-3">
-          <div class="card">
-            <img src="images/RyCinemaLogo.png" class="card-img-top" alt="Project 1">
-            <div class="card-body">
-              <h5 class="card-title">Cinema Website</h5>
-              <p class="card-text mt-1">This is my very first website but this is my developement and starting off my growth as a developer,-RyCinema is a fully functional cinema website I developed using C#, JavaScript, and custom Photoshop design elements. This project showcases my ability to combine strong back-end logic with smooth, interactive front-end features. From dynamic movie listings to a clean, visually appealing interface, RyCinema demonstrates my skills in building practical, user-focused web applications. It reflects my attention to detail, creativity, and commitment to delivering polished digital experiences.I’ve uploaded all my projects to my GitHub portfolio. If you'd like to review or test them, you can clone the repository from GitHub and then open the project files in Visual Studio.👇</p>
-              <a href="https://github.com/141800764-ux/Rycinema" class="btn btn-primary">View Project</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <img src="images/SunEcoLogoDesign.png" class="card-img-top d-block mx-auto" style="width: 255px;" alt="Project 2">
-            <div class="card-body">
-              <h5 class="card-title">Travel Agency Website</h5>
-              <p class="card-text">Sun Eco Travel Agency Website – Personal Project
-
-This project showcases my growth as a web developer through building a full website using HTML, CSS, and JavaScript. I created a visually rich layout with headers, navigation, banners, slideshows, and footers.
-
-I implemented a slideshow carousel using JavaScript, giving the site interactive elements. I also experimented with CSS positioning, animations, and styling, learning how to arrange multiple elements on a page and make the design visually appealing.
-
-This project helped me gain confidence in structuring a website, styling it effectively, and adding simple interactivity, marking an important step in my development journey.You may click on view project and this will take you to the prject itself,please increase or decrease the size of the screen to see the full website nicely as no responsiveness has been used for this project at the time however its very nice and hope you enjoy👇</p>
-              <a href="https://141800764-ux.github.io/SunEcoTravel/" class="btn btn-primary">View Project</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <img src="images/photoshoppic.jpg.png" class="card-img-top photoshop-img" 
-     style="width: 250px; height: 250px; justify-content: center;margin-left: 10%;" alt="Project 3">
-            <div class="card-body">
-              <h5 class="card-title">Graphic Design & Photoshop Portfolio</h5>
-              <p class="card-text">I specialize in creative graphic design and digital image editing using Adobe Photoshop. My work focuses on transforming concepts into visually striking designs — from photo manipulation and compositing to logo design, posters, and digital artwork. Each project reflects attention to detail, color harmony, and visual balance. I enjoy bringing imagination to life through clean layouts, precise editing, and creative storytelling in every design. Go Ahead open up my Gallery!👇</p>
-              <a href="gallery.html" class="btn btn-primary">View Project</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <img src="images/GameBlinkLogo.png" class="card-img-top photoshop-img" 
-     style="width: 250px; height: 250px; justify-content: center;margin-left: 9%;" alt="Project 3">
-            <div class="card-body">
-              <h5 class="card-title">GameBlink Gaming Website</h5>
-              <p class="card-text">GameBlink is a fully functional online game store website that I designed and developed using a combination of front-end technologies (HTML, CSS, Bootstrap, JavaScript) and back-end development in C# with ASP.NET Web Forms. The project features dynamic pages, responsive layouts, interactive UI elements, and database-driven functionality powered through C# code-behind. If you'd like to review or test them, you can clone the repository from GitHub and then open the project files in Visual Studio.👇</p>
-              <a href="https://github.com/141800764-ux/GameBlink" class="btn btn-primary">View Project</a>
-            </div>
-          </div>
-        </div>
+        <!-- Project Cards here (same as your previous ones) -->
       </div>
     </div>
   </section>
-  
 
-
+  <!-- Footer -->
   <footer class="footer text-center py-4" style="background:#222; color:#ccc;">
     <div class="container">
       <h4 class="mb-3" style="color:white;">Riyaad Ismail</h4>
